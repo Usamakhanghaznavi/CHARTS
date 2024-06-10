@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pie-Doughnut</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+          }
+          
+        .chartCard {
+            display: flex;
+          justify-content: center;
+        
+          }
+          .chartBox {
+            width: 400px;
+            background: white;
+          }
+    </style>
+  </head>
+  <body>
+   
+              <div class="chartCard">
+                    <div class="chartBox">
+                      <canvas id="myChartpie"></canvas>
+                    </div>
+                        <div class="chartBox">
+                          <canvas id="myChartdoughnut"></canvas>
+                        </div>
+                
+              </div>
+              <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script> -->
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+          <script>
+              // Chart.defaults.font.size=20;
+          // setup 
+
+              const datapie = {
+                      labels: ['PDA', 'HEALTH','LABOUR', 'FOOD', 'IRRIGATION'],
+                      datasets: [{
+                        label: 'Meeting Timing',
+                        data:  [54, 33,37, 41, 50],
+                        
+                      
+                        backgroundColor: [
+                              'rgba(247, 0, 0, 0.8)',
+                              'rgba(30, 105, 255, 0.8)',
+                              'rgba(33, 255, 31, 0.8)',
+                              'rgba(255, 31, 211, 0.8)',
+                              'rgba(31, 255, 145, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(247, 0, 0, 0.8)',
+                            'rgba(30, 105, 255, 0.8)',
+                            'rgba(33, 255, 31, 0.8)',
+                            'rgba(255, 31, 211, 0.8)',
+                            'rgba(31, 255, 145, 0.8)'
+                        ],
+                        borderWidth: 1
+                }]
+              };
+              
+              // config 
+              const configpie = {
+                
+                      
+                      type: 'line',
+                      data:datapie,
+                      options: {
+                        responsive: true,
+                          plugins: {
+
+
+            
+
+                              legend: {
+                                  display: true,
+                                  position: 'bottom',
+                                  labels: {
+                               
+                                      color: 'darkred',
+                                      font: {
+                                        size:12,
+                                          weight: 'bold'
+                                      },
+                                  }
+                              }
+                            }
+
+
+
+                            // datalabels:{
+                            //     font:{
+                            //       width: "normal",
+                            //       size:22px,
+                            //       family:"'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+
+
+                            //     }
+
+                                                   
+                },
+              
+              plugins:[ChartDataLabels]
+              };
+          // render init block
+              const myChartpie = new Chart(
+                    document.getElementById('myChartpie'),
+                    configpie
+                   
+                  );
+
+      </script>
+
+  </body>
+</html>
