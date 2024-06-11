@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pie-Doughnut</title>
+    <title></title>
     <style>
           * {
             margin: 0;
@@ -26,21 +26,17 @@
    
               <div class="chartCard">
                     <div class="chartBox">
-                      <canvas id="myChartpie"></canvas>
-                    </div>
-                        <div class="chartBox">
-                          <canvas id="myChartdoughnut"></canvas>
-                        </div>
-                
+                      <canvas id="myChartbar"></canvas>
+                    </div>           
               </div>
-              <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script> -->
+             
               <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
               <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
           <script>
 
-const datadoughnut = {
+const databar = {
                   labels: ['PDA', 'HEALTH','LABOUR', 'FOOD', 'IRRIGATION'],
                   datasets: [{
                     label: 'Meeting Timing',
@@ -66,9 +62,9 @@ const datadoughnut = {
 
 
           // config 
-          const configdoughnut = {
+          const configbar = {
                   type: 'bar',
-                  data:datadoughnut,//es6 shorthand
+                  data:databar,
                   options: {
                         responsive: true,
                           plugins: {
@@ -93,9 +89,9 @@ const datadoughnut = {
           };
 
           // render init block
-                const myChartdoughnut = new Chart(
-                  document.getElementById('myChartdoughnut'),
-                  configdoughnut
+                const myChartbar = new Chart(
+                  document.getElementById('myChartbar'),
+                  configbar
           );
           
           </script>
