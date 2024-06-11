@@ -40,11 +40,12 @@
 
           <script>
 
-const datadoughnut = {
+
+          const datadoughnut = {
                   labels: ['PDA', 'HEALTH','LABOUR', 'FOOD', 'IRRIGATION'],
                   datasets: [{
                     label: 'Meeting Timing',
-                    data: [9, 18, 23,32, 28],
+                    data: [18, 12, 6, 9, 12],
                     backgroundColor: [
                     
                           'rgba(247, 0, 0, 0.8)',
@@ -67,7 +68,7 @@ const datadoughnut = {
 
           // config 
           const configdoughnut = {
-                  type: 'Doughnut',
+                  type: 'doughnut',
                   data:datadoughnut,//es6 shorthand
                   options: {
                         responsive: true,
