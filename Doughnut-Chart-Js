@@ -25,9 +25,6 @@
   <body>
    
               <div class="chartCard">
-                    <div class="chartBox">
-                      <canvas id="myChartpie"></canvas>
-                    </div>
                         <div class="chartBox">
                           <canvas id="myChartdoughnut"></canvas>
                         </div>
